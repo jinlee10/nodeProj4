@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ejs 테스트이오!<br/>
+그냥 html 태그 쓰듯이 써도 되오!<br/>
+-----<br/>
+이름: <%= name %>  <br/>
+이메일: <%= email %> <br/>
+취미: <%= hobby %> <br/>
+반목문 구문<br/>
+<UL>
+
+<%
+	for(i = 0; i < hobby.length; i++){
+%>	
+	<li>
+	<%= hobby[i]; %>
+	</li>	
+<%	}
+%>
+
+</UL>
+
+-----<br/>
+넘길때 { ㅁ : ㅁㅁ }면 앞에 ㅁ 이름을 조기다 써줘야한다<br/>
+html개발자들은 저기 부등호 % 는 저부분 빼고 개발하믄됨ㅎ<br/>
+디자인 쉽게 만들라고 웹서버만들때 많이들 만든대<br/>
+
+</body>
+</html>

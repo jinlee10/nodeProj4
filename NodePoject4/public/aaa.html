@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>멤버리스트실습 0807</title>
+</head>
+<body>
+~~멤바리스트~~
+<table border='1'>
+	<tr>
+		<th>번  호</th>
+		<th>이  름</th>
+		<th>id</th>
+		<th>pw</th>
+		<th>이메일</th>
+		<th>조회수</th>
+	</tr>
+
+<%
+for(var i = 0; i < user.length; i++){
+%>
+	<tr>
+		<td> <%= user[i].num %> </td>
+		<td> <%= user[i].name %> </td>
+		<td> <%= user[i].id %> </td>
+		<td> <%= user[i].pw %> </td>
+		<td> <%= user[i].email %> </td>
+		<td> <%= user[i].idate %> </td>
+	</tr>
+<%
+}
+%>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GuGuDan</title>
+</head>
+<body>
+구구단!
+<table border="1">
+	<tr>
+		<th>단수: <%= num %></th>
+		<th>  x  </th>
+		<th>숫자</th>
+		<th>  =  </th>
+		<th>결과값</th> 
+	</tr>
+	
+	<%
+	for(i = 1; i < 10; i++){
+	%>
+		<tr>
+			<td><%= num %></td>
+			<td> x </td>
+			<td><%= i %></td>
+			<td> = </td>
+			<td><%= num*i %></td>
+		</tr>
+	<%
+	}
+	%>
+
+
+</table>
+</body>
+</html>

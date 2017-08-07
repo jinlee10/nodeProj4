@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+view - boar-d
+<table border='1'>
+<tr>
+	<th>글번호</th>
+	<th>글쓴이</th>
+	<th>제목</th>
+	<th>내용</th>
+	<th>날짜</th>
+	<th>조회수</th>
+</tr>
+<tr>
+	<td> <%= board.num %></td>
+	<td> <%= board.writer %></td>
+	<td> <%= board.title %></td>
+	<td> <%= board.contents %></td>
+	<td> <%= board.idate %></td>
+	<td> <%= board.cnt %></td>
+</tr>
+
+</table>
+
+<% include ./fooder.ejs %>
+다른문서를 끼워넣기하고싶을떄 인클루드 '경로'
+</body>
+</html>
