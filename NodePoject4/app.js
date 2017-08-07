@@ -435,6 +435,18 @@ app.get('/memberlistJson', function(req, res){
 });
 
 //회원정보 수정
+app.post('/memberupdate', function(req, res){
+	var newname = req.body.newname;
+	var newpw = req.body.newpw;
+	var uid = req.body.uid;
+	
+	connection.connect();
+	
+	connection.query('UPDATE member SET name = ?, pw = ? WHERE id = ?', [newname, newpw, uid]);
+	
+	connection.end();
+});
+
 
 //회원탈퇴
 
