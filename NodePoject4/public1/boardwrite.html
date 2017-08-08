@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>게시판 글 쓰기 페이지</h1>
+<form action = '/board/write' method ='post' enctype='multipart/form-data'>
+<p>
+제목<input type='text' name='title'><br/>
+<p>
+글쓴이 ID <input type='text' name='author'><br/>
+<p>
+<input type = 'file' name = 'img'><br>
+<p>
+<textarea name = 'content' ></textarea>
+<p>
+<input type='submit' value='ok'>
+</form>
+<p>
+<p>
+<a href='./board/list'>List</a>
+</body>
+</html>

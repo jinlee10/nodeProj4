@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DB Select</title>
+</head>
+<body>
+<h2> 모든 리스트 보기 </h2>
+<table border = '1'>
+<tr>
+	<th>num</th>
+	<th>title</th>
+	<th>author</th>
+	<th>content</th>
+	<!-- <th>ip</th> -->
+	<th>idate</th>
+	<th>img</th>
+</tr>
+
+
+<%
+
+for(var i = 0; i < list.length; i++){
+
+var date = moment(list[i].idate).format('YYYY-MM-DD, hh:mm:ss');
+
+%>
+<tr>
+	<td> <%= list[i].num %> </td>
+	<td> <a href='/board/read?num=<%=list[i].num%>'><%= list[i].title %> </a></td>
+	<td> <%= list[i].author %> </td>
+	<td> <%= list[i].content %> </td>
+<!-- 	<td> <%= list[i].ip %> </td> -->
+	<td> <%= date %> </td>
+	<td> <%= list[i].img %> </td>
+
+</tr>
+<%
+}
+%>
+</table>
+<br/>
+<br/>
+<a href='/boardwrite.html'>글쓰기</a>
+</body>
+</html>

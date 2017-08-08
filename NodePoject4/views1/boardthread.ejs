@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>값 하나 보기</h2>
+
+
+<form action='/board/update' method='post'>
+<!-- 여긴 내가 알아서 해봅시다 -->
+</form>
+<p>
+글쓴이 <input type='text' name = 'author' readOnly value='<%= board.author %>'>
+<p>
+글제목 <input type='text' name = 'title' value='<%= board.title %>'>
+<p>
+글내용 <textarea name='content' rows='10' cols='50'>
+<%= board.content %>
+</textarea>
+<p>
+IQ : <%= board.ip %>
+<p>
+작성일: <%= moment(board.idate).format('YYYY-MM-DD, hh:mm:ss') %>
+<p>
+img: <%= board.img %>
+<p>
+<img src='/images/<%= board.img %>'>
+<p>
+
+
+
+</body>
+</html>
